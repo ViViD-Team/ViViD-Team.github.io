@@ -11,13 +11,11 @@
     import BlogPost from "./BlogPost.svelte";
 
     const blogPosts = [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
+        }
     ]
 
 </script>
@@ -87,7 +85,6 @@
         position: relative;
 
         width: 100vw;
-        min-height: 80vh;
 
         display: flex;
         flex-direction: column;
@@ -151,7 +148,7 @@
 
 
     .blogPostLayout {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
         width: calc(100% - 4rem);
         padding-left: 2rem;

@@ -3,23 +3,20 @@
   import OurProjects from "./lib/OurProjects.svelte";
   import BlogOverview from "./lib/BlogOverview.svelte";
   import Footer from "./lib/Footer.svelte";
-
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    fetch("_blog/testEntry.json").then(data => {
-      console.log(data);
-    });
-  });
+  import Blog from "./lib/Blog.svelte";
 </script>
 
 
 
 <main>
-  <Landing />
-  <OurProjects />
-  <BlogOverview />
-  <Footer />
+  {#if new URL(window.location).searchParams.get("blog")}
+    <Blog />
+  {:else}
+    <Landing />
+    <OurProjects />
+    <BlogOverview />
+    <Footer />
+  {/if}
 </main>
 
 
