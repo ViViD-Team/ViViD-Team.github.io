@@ -18,6 +18,45 @@
             "image_resource": Outline,
             "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
             "download_href": null
+        },
+        {
+            "name": "Notline",
+            "description": "                                            \
+                Manage your data, calculate spreadsheets and track your \
+                progress using Outline! This app allows you to organize \
+                text, calculations, to-do-lists and much more all in    \
+                one place. The functionality is easily expandable using \
+                plugins.                                                \
+            ",
+            "image_resource": Outline,
+            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
+            "download_href": null
+        },
+        {
+            "name": "loolline",
+            "description": "                                            \
+                Manage your data, calculate spreadsheets and track your \
+                progress using Outline! This app allows you to organize \
+                text, calculations, to-do-lists and much more all in    \
+                one place. The functionality is easily expandable using \
+                plugins.                                                \
+            ",
+            "image_resource": Outline,
+            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
+            "download_href": null
+        },
+        {
+            "name": "Oasline",
+            "description": "                                            \
+                Manage your data, calculate spreadsheets and track your \
+                progress using Outline! This app allows you to organize \
+                text, calculations, to-do-lists and much more all in    \
+                one place. The functionality is easily expandable using \
+                plugins.                                                \
+            ",
+            "image_resource": Outline,
+            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
+            "download_href": null
         }
     ]
 
@@ -68,14 +107,18 @@
 
 
     <div class="leftButtonContainer">
-        <div tabindex="0" class="leftButton" on:click={function() {getPrev().scrollIntoView({behavior: "smooth"})}}>
+        <div tabindex="0" class="leftButton" on:click={function() {
+            getPrev().scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+        }}>
             <svg viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7678 0.732233C15.7915 -0.244078 14.2085 -0.244078 13.2322 0.732233L0.732233 13.2322C-0.244078 14.2085 -0.244078 15.7915 0.732233 16.7678L13.2322 29.2678C14.2085 30.2441 15.7915 30.2441 16.7678 29.2678C17.7441 28.2915 17.7441 26.7085 16.7678 25.7322L6.03553 15L16.7678 4.26777C17.7441 3.29146 17.7441 1.70854 16.7678 0.732233Z"/>
             </svg>
         </div>
     </div>
     <div class="rightButtonContainer">
-        <div tabindex="0" class="rightButton" on:click={function() {getNext().scrollIntoView({behavior: "smooth"})}}>
+        <div tabindex="0" class="rightButton" on:click={function() {
+            getNext().scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+        }}>
             <svg viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.732233 0.732233C1.70854 -0.244078 3.29146 -0.244078 4.26777 0.732233L16.7678 13.2322C17.7441 14.2085 17.7441 15.7915 16.7678 16.7678L4.26777 29.2678C3.29146 30.2441 1.70854 30.2441 0.732233 29.2678C-0.244078 28.2915 -0.244078 26.7085 0.732233 25.7322L11.4645 15L0.732233 4.26777C-0.244078 3.29146 -0.244078 1.70854 0.732233 0.732233Z"/>
             </svg>
@@ -85,7 +128,7 @@
     <div class="indicatorContainer">
         {#if scroller}
             {#each projects as project, index}
-                <div class="indicator" on:click={function() {Array.from(scroller.children)[index].scrollIntoView({behavior: "smooth"})}}>
+                <div class="indicator" on:click={function() {Array.from(scroller.children)[index].scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"})}}>
                     <div class="indicatorGraphic" style="
                     {currentSelected == index ? `background-color: var(--v1)` : ""}
                 "></div>

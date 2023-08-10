@@ -3,6 +3,13 @@
   import OurProjects from "./lib/OurProjects.svelte";
   import BlogOverview from "./lib/BlogOverview.svelte";
   import Footer from "./lib/Footer.svelte";
+    import { onMount } from "svelte";
+
+  onMount(() => {
+    fetch("_blog/testEntry.json").then(data => {
+      console.log(data);
+    });
+  });
 </script>
 
 

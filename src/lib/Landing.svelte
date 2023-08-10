@@ -13,6 +13,26 @@
     import Separator from "./Separator.svelte";
     import MemberCard from "./MemberCard.svelte";
 
+    const members = [
+        {
+            "name": "Adrian",
+            "profilePictureResource": null,
+            "aboutMe": "A little text lmfao",
+            "social": {
+                "email": "adrian.juengling@gmail.com",
+                "github": "https://github.com/AliBlubberus",
+            }
+        },
+        {
+            "name": "Jan",
+            "profilePictureResource": null,
+            "aboutMe": "I wonder if he'll ever make one of these",
+            "social": {
+                "github": "https://github.com/TeeFederFisch"
+            }
+        }
+    ];
+
 </script>
   
   
@@ -97,7 +117,9 @@
     <Separator label="Our Members"/>
 
     <div class="memberContainer">
-        <MemberCard />
+        {#each members as member}
+            <MemberCard data={member}/>
+        {/each}
     </div>
 
     <div class="transition">

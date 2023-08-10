@@ -12,8 +12,12 @@
     </div>
 
     <div class="actionStrip">
-        <a href="#top" class="solid">Find Out More</a>
-        <a href="#top" class="light">Download</a>
+        {#if data.findoutmore_href}
+        <a href="{data.findoutmore_href}" class="solid">Find Out More</a>
+        {/if}
+        {#if data.download_href}
+        <a href="{data.download_href}" class="light">Download</a>
+        {/if}
     </div>
 </main>
 
