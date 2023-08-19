@@ -155,4 +155,10 @@
         transition: fill .5s cubic-bezier(0, 0, 0, .9);
     }
 
+    @media only screen and (max-width: 100vh) {
+        main {
+            margin: 0;
+        }
+    }
+
 </style>

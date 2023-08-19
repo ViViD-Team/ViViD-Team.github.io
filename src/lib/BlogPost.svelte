@@ -87,4 +87,10 @@
         max-width: calc(100% - 1rem);
         text-align: center;
     }
+
+    @media only screen and (max-width: 100vh) {
+        main {
+            margin: 0;
+        }
+    }
 </style>

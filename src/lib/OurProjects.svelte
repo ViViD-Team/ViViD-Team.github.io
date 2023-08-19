@@ -19,8 +19,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        box-shadow: 0 .5rem 0 1rem var(--white);
     }
 
     main h2 {

@@ -1,7 +1,5 @@
 <script>
-    import Blob_01 from "../assets/blob_01.svg";
-    import Blob_02 from "../assets/blob_02.svg";
-    import Blob_03 from "../assets/blob_03.svg";
+    import BlobBackground from "../assets/blobBackground.svg"; 
 
     import wave_v1 from "../assets/wave_v1.svg";
     import wave_v2 from "../assets/wave_v2.svg";
@@ -15,6 +13,36 @@
             "title": "Test Article",
             "id": "test",
             "imageResource": "/src/assets/project_covers/Outline.jpg"
+        },
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
+        },
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
+        },
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
+        },
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
+        },
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
+        },
+        {
+            "title": "Test Article",
+            "id": "test",
+            "imageResource": "/src/assets/project_covers/Outline.jpg"
         }
     ]
 
@@ -23,38 +51,7 @@
 
 
 <main>
-    <div class="background">
-        <img src={Blob_01} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 2vh;
-            left: -10vw;
-        ">
-        <img src={Blob_01} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 25vh;
-            left: 63vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 30vh;
-            left: 45vw;
-        ">
-        <img src={Blob_02} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 40vh;
-            left: 20vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: -15vh;
-            left: 33vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: -20vh;
-            left: 80vw;
-        ">
-    </div>
+    <div class="patternBackground" style="background-image: url({BlobBackground});"></div>
 
     <div class="transition intro">
         <div class="wave" style="background-image: url({wave_v1});"></div>
@@ -73,7 +70,7 @@
     <div class="transition">
         <div class="wave" style="background-image: url({wave_v1});"></div>
         <div class="wave" style="background-image: url({wave_v2});"></div>
-        <div class="wave" style="background-image: url({wave_white}); height: 25%; transform: translate(1px)"></div>
+        <div class="wave" style="background-image: url({wave_white}); height: 25%;"></div>
     </div>
 
 </main>
@@ -92,8 +89,7 @@
         overflow: hidden;
     }
   
-    .background {
-        z-index: 0;
+    .patternBackground {
         position: absolute;
 
         top: 0;
@@ -102,23 +98,8 @@
         width: 100%;
         height: 100%;
 
-        overflow: hidden;
-
-        opacity: .3;
-
-        user-select: none;
-        -webkit-user-drag: none;
-    }
-  
-    .backdropBlob {
-        width: 30vw;
-        height: 30vw;
-
-        filter: blur(20vh);
-        -webkit-filter: blur(20vh);
-
-        user-select: none;
-        -webkit-user-drag: none;
+        background-size: cover;
+        filter: blur(15vh);
     }
 
 
@@ -131,15 +112,16 @@
     }
 
     .transition.intro {
-        transform: scale(-1, -1);
+        transform: scale(-1, -1) translateY(1px);
     }
 
     .transition .wave {
         position: absolute;
 
         bottom: 0;
+        left: -1px;
 
-        width: 100%;
+        width: 105%;
         height: 100%;
 
         background-size: cover;
@@ -159,5 +141,20 @@
         justify-content: center;
 
         flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width: 100vh) {
+        .blogPostLayout {
+            padding: 2rem;
+
+            height: 30rem;
+            gap: 2rem;
+
+            flex-direction: column;
+
+            justify-content: flex-start;
+
+            overflow-x: scroll;
+        }
     }
 </style>

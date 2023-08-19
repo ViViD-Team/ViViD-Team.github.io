@@ -1,7 +1,6 @@
 <script>
-    import Blob_01 from "../assets/blob_01.svg";
-    import Blob_02 from "../assets/blob_02.svg";
-    import Blob_03 from "../assets/blob_03.svg";
+    import BlobBackground from "../assets/blobBackground.svg"; 
+
 
     import ViViD from "../assets/ViViD.svg";
     import ViViD_Skelleton from "../assets/ViViD_Skelleton.svg";
@@ -38,63 +37,7 @@
   
   
 <main>
-    <div class="background">
-        <img src={Blob_01} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 2vh;
-            left: -10vw;
-        ">
-        <img src={Blob_01} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 25vh;
-            left: 63vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 30vh;
-            left: 45vw;
-        ">
-        <img src={Blob_02} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 40vh;
-            left: 20vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: -15vh;
-            left: 33vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: -20vh;
-            left: 80vw;
-        ">
-        <img src={Blob_01} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 100vh;
-            left: 0vw;
-        ">
-        <img src={Blob_02} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 103vh;
-            left: 66vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 110vh;
-            left: 30vw;
-        ">
-        <img src={Blob_03} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 50vh;
-            left: -30vw;
-        ">
-        <img src={Blob_02} class="backdropBlob" alt="asd" style="
-            position: absolute;
-            top: 45vh;
-            left: 100vw;
-        ">
-    </div>
+    <div class="patternBackground" style="background-image: url({BlobBackground});"></div>
 
     <div class="LogoContainer">
         <img src={ViViD_Skelleton} alt="" style="animation-delay: .25s;">
@@ -114,7 +57,7 @@
         In 2022, we decided to team up and cooperate on software products.</p>
     </div>
 
-    <Separator label="Our Members"/>
+    <Separator label="Our Members" animationDelay={1.25}/>
 
     <div class="memberContainer">
         {#each members as member}
@@ -125,7 +68,7 @@
     <div class="transition">
         <div class="wave" style="background-image: url({wave_v1});"></div>
         <div class="wave" style="background-image: url({wave_v2});"></div>
-        <div class="wave" style="background-image: url({wave_white}); height: 25%; transform: translate(1px)"></div>
+        <div class="wave" style="background-image: url({wave_white}); height: 25%;"></div>
     </div>
 </main>
   
@@ -152,8 +95,7 @@
         overflow: hidden;
     }
   
-    .background {
-        z-index: 0;
+    .patternBackground {
         position: absolute;
 
         top: 0;
@@ -162,23 +104,8 @@
         width: 100%;
         height: 100%;
 
-        overflow: hidden;
-
-        opacity: .3;
-
-        user-select: none;
-        -webkit-user-drag: none;
-    }
-  
-    .backdropBlob {
-        width: 30vw;
-        height: 30vw;
-
-        filter: blur(20vh);
-        -webkit-filter: blur(20vh);
-
-        user-select: none;
-        -webkit-user-drag: none;
+        background-size: cover;
+        filter: blur(15vh);
     }
 
 
@@ -207,7 +134,7 @@
 
     .greetingContainer {
         width: 100%;
-        height: 8rem;
+        min-height: 8rem;
 
         display: grid;
         place-items: center;
@@ -218,8 +145,12 @@
     }
 
     .greetingContainer h2 {
+        max-width: 80%;
+
         font-size: 2rem;
         font-weight: 600;
+
+        text-align: center;
     }
 
 
@@ -250,6 +181,8 @@
         justify-content: center;
 
         flex-wrap: wrap;
+
+        animation: logoAppear 2s cubic-bezier(0, 0, 0, .9) both 1.5s;
     }
 
 
@@ -267,11 +200,40 @@
         position: absolute;
 
         bottom: 0;
+        left: -1px;
 
-        width: 100%;
+        width: 105%;
         height: 100%;
 
         background-size: cover;
         background-repeat: repeat-x;
+    }
+
+    
+    @media only screen and (max-width: 100vh) {
+        .LogoContainer {
+            height: 8rem;
+        }
+
+        .whoWeAreContainer p {
+            width: 80%;
+            font-size: 1.25rem;
+        }
+
+        .memberContainer {
+            padding: 2rem;
+
+            width: calc(100vw - 4rem);
+
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            justify-content: flex-start;
+            gap: 2rem;
+
+            overflow-x: scroll;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
     }
   </style>

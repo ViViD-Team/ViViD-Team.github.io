@@ -25,11 +25,11 @@
     {#if postJSON}
         <div class="headerContainer">
             <div class="outer dash"></div>
-                <h2>{postJSON.author}</h2>
+                <h2 class="author">{postJSON.author}</h2>
             <div class="dash"></div>
                 <h1>{postJSON.title}</h1>
             <div class="dash"></div>
-                <h2>{postJSON.date}</h2>
+                <h2 class="date">{postJSON.date}</h2>
             <div class="outer dash"></div>
         </div>
 
@@ -105,8 +105,8 @@
         width: 100%;
         height: 100%;
 
-        background-size: contain;
-        filter: blur(20vh);
+        background-size: cover;
+        filter: blur(25vh);
     }
 
 
@@ -118,9 +118,12 @@
         align-items: center;
     }
 
+    .logoContainer a {
+        margin-left: 1rem;
+    }
+
     .logoContainer :is(img, a) {
         height: 2rem;
-        margin-left: 1rem;
     }
 
     .logoContainer a>img {
@@ -140,6 +143,11 @@
     h1 {
         font-size: 2rem;
         font-weight: 900;
+    }
+
+    .headerContainer h1 {
+        max-width: 50%;
+        text-align: center;
     }
 
     h2 {
@@ -201,7 +209,7 @@
     .button {
         cursor: pointer;
 
-        height: 3rem;
+        min-height: 3rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
 
@@ -211,6 +219,7 @@
         place-items: center;
 
         text-decoration: none;
+        text-align: center;
 
         transition: transform .5s cubic-bezier(0, 0, 0, .9);
     }
@@ -234,5 +243,49 @@
 
     .button.weak h4 {
         color: var(--ownColor);
+    }
+
+    .button h4 {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    @media only screen and (max-width: 100vh) {
+        .dash {
+            display: none;
+        }
+
+        .headerContainer {
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .headerContainer h1 {
+            max-width: calc(100% - 2rem);
+        }
+
+        h2 {
+            position: absolute;
+            top: 0;
+            transform: translateY(-100%);
+
+            opacity: .5;
+        }
+
+        .author {
+            left: 1rem;
+        }
+
+        .date {
+            right: 1rem;
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        .content>* {
+            max-width: calc(100% - 6rem);
+        }
     }
 </style>

@@ -17,6 +17,32 @@
             ",
             "image_resource": Outline,
             "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
+            "download_href": "#"
+        },
+        {
+            "name": "Oaftline",
+            "description": "                                            \
+                Manage your data, calculate spreadsheets and track your \
+                progress using Outline! This app allows you to organize \
+                text, calculations, to-do-lists and much more all in    \
+                one place. The functionality is easily expandable using \
+                plugins.                                                \
+            ",
+            "image_resource": Outline,
+            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
+            "download_href": null
+        },
+        {
+            "name": "Outasdine",
+            "description": "                                            \
+                Manage your data, calculate spreadsheets and track your \
+                progress using Outline! This app allows you to organize \
+                text, calculations, to-do-lists and much more all in    \
+                one place. The functionality is easily expandable using \
+                plugins.                                                \
+            ",
+            "image_resource": Outline,
+            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
             "download_href": null
         }
     ]
@@ -223,5 +249,31 @@
         background-color: var(--black-transparent);
 
         transition: background-color .5s cubic-bezier(0, 0, 0, .9);
+    }
+
+    
+    @media only screen and (max-width: 100vh) {
+        main {
+            height: 38rem;
+        }
+
+        .scroller {
+            height: 36rem;
+
+            flex-shrink: 0;
+        }
+
+        :is(.rightButtonContainer, .leftButtonContainer) {
+            width: 2rem;
+            height: 36rem;
+        }
+
+        :is(.leftButton, .rightButton) {
+            width: 2rem;
+        }
+
+        .indicatorContainer {
+            margin-bottom: 2rem;
+        }
     }
 </style>

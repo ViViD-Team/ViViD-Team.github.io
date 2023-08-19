@@ -130,6 +130,8 @@
         display: grid;
         place-items: center;
 
+        flex-shrink: 0;
+
         font-size: .8rem;
         font-weight: 600;
 
@@ -150,6 +152,59 @@
     .actionStrip a.light {
         box-shadow: inset 0 0 0 .1rem var(--white);
         color: var(--white);
+    }
+
+    @media only screen and (max-width: 100vh) {
+        main {
+            aspect-ratio: 9 / 16;
+            background-color: var(--v1);
+        }
+
+        .image {
+            margin-top: 4rem;
+            height: calc(100% - 12rem);
+        }
+
+        :is(.titleContainer, .descriptionContainer) {
+            background: none;
+        }
+
+        .descriptionContainer {
+            position: absolute;
+            flex: unset;
+
+            width: 100%;
+            height: 8rem;
+
+            left: 0;
+            bottom: 0;
+
+            display: grid;
+            place-items: center;
+        }
+
+        .descriptionContainer p {
+            margin: 0;
+
+            max-height: unset;
+
+            width: calc(100% - 1rem);
+            height: 7rem;
+
+            text-align: justify;
+            font-size: .8rem;
+            color: var(--white);
+        }
+
+        .titleContainer h3 {
+            color: var(--white);
+        }
+
+        .actionStrip {
+            padding: 0;
+            gap: unset;
+            justify-content: space-evenly;
+        }
     }
 
 </style>

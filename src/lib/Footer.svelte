@@ -38,7 +38,7 @@
     <div class="section">
         <div class="legal">
             <a href="#top"><p>legal notice</p></a>
-            <a href="#top"><p>privacy policy</p></a>
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"><p>privacy policy</p></a>
         </div>
     </div>
 </main>
@@ -150,5 +150,25 @@
 
     .legal a {
         text-decoration: none;
+    }
+
+    @media only screen and (max-width: 100vh) {
+        main {
+            flex-direction: column;
+            height: unset;
+        }
+
+        .section {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 100%;
+            margin-bottom: 2rem;
+
+            text-align: center;
+        }
+
+        .coffeeButtonContainer, .socialMediaButtonContainer {
+            margin-top: 2rem;
+        }
     }
 </style>
