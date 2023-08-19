@@ -9,41 +9,11 @@
     import BlogPost from "./BlogPost.svelte";
 
     const blogPosts = [
-        {
+        /* {
             "title": "Test Article",
             "id": "test",
             "imageResource": "/src/assets/project_covers/Outline.jpg"
-        },
-        {
-            "title": "Test Article",
-            "id": "test",
-            "imageResource": "/src/assets/project_covers/Outline.jpg"
-        },
-        {
-            "title": "Test Article",
-            "id": "test",
-            "imageResource": "/src/assets/project_covers/Outline.jpg"
-        },
-        {
-            "title": "Test Article",
-            "id": "test",
-            "imageResource": "/src/assets/project_covers/Outline.jpg"
-        },
-        {
-            "title": "Test Article",
-            "id": "test",
-            "imageResource": "/src/assets/project_covers/Outline.jpg"
-        },
-        {
-            "title": "Test Article",
-            "id": "test",
-            "imageResource": "/src/assets/project_covers/Outline.jpg"
-        },
-        {
-            "title": "Test Article",
-            "id": "test",
-            "imageResource": "/src/assets/project_covers/Outline.jpg"
-        }
+        } */
     ]
 
 </script>

@@ -18,32 +18,6 @@
             "image_resource": Outline,
             "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
             "download_href": "#"
-        },
-        {
-            "name": "Oaftline",
-            "description": "                                            \
-                Manage your data, calculate spreadsheets and track your \
-                progress using Outline! This app allows you to organize \
-                text, calculations, to-do-lists and much more all in    \
-                one place. The functionality is easily expandable using \
-                plugins.                                                \
-            ",
-            "image_resource": Outline,
-            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
-            "download_href": null
-        },
-        {
-            "name": "Outasdine",
-            "description": "                                            \
-                Manage your data, calculate spreadsheets and track your \
-                progress using Outline! This app allows you to organize \
-                text, calculations, to-do-lists and much more all in    \
-                one place. The functionality is easily expandable using \
-                plugins.                                                \
-            ",
-            "image_resource": Outline,
-            "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
-            "download_href": null
         }
     ]
 
