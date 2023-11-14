@@ -16,7 +16,7 @@
         {
             "name": "Adrian",
             "profilePictureResource": "url(\"https://avatars.githubusercontent.com/u/87329737?v=4\")",
-            "aboutMe": "I'm an 18 year old german student. During fifth grade, I had my first bit of programming experience with scratch. Around 2018 I tried developing games in unity. Today, I mainly do frontend / webdesign. I am most confortable in javascript, though I'm also currently learning rust and c++.",
+            "aboutMe": "I'm an 18 year old german student. During fifth grade, I had my first bit of programming experience with scratch. Around 2018 I tried developing games in unity. Today, I mainly do frontend / webdesign. I am most comfortable in javascript, though I'm also currently learning rust and c++.",
             "social": {
                 "email": "adrian.juengling@gmail.com",
                 "github": "https://github.com/AliBlubberus",
