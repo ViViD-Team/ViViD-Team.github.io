@@ -9,7 +9,7 @@
 
 
 <main>
-  {#if new URL(window.location).searchParams.get("blog")}
+  {#if new URL(String(window.location)).searchParams.get("blog")}
     <Blog />
   {:else}
     <Landing />

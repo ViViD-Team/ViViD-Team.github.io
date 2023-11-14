@@ -15,8 +15,8 @@
     const members = [
         {
             "name": "Adrian",
-            "profilePictureResource": null,
-            "aboutMe": "A little text lmfao",
+            "profilePictureResource": "url(\"https://avatars.githubusercontent.com/u/87329737?v=4\")",
+            "aboutMe": "I'm an 18 year old german student. During fifth grade, I had my first bit of programming experience with scratch. Around 2018 I tried developing games in unity. Today, I mainly do frontend / webdesign. I am most comfortable in javascript, though I'm also currently learning rust and c++.",
             "social": {
                 "email": "adrian.juengling@gmail.com",
                 "github": "https://github.com/AliBlubberus",
@@ -24,8 +24,8 @@
         },
         {
             "name": "Jan",
-            "profilePictureResource": null,
-            "aboutMe": "I wonder if he'll ever make one of these",
+            "profilePictureResource": "url(\"https://avatars.githubusercontent.com/u/85286163?v=4\")",
+            "aboutMe": "I'm a 17 year old student from Germany. I started coding in about 2018 in Python, which i used for almost four years before learning Rust. I now do backend stuff in Rust and rely on Adrian for any frontend that's supposed to look cool.",
             "social": {
                 "github": "https://github.com/TeeFederFisch"
             }
