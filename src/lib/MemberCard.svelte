@@ -86,6 +86,8 @@
         flex-grow: 0;
 
         background-color: var(--v3);
+
+        background-size: cover;
     }
 
     .nameTag p {
