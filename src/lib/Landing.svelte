@@ -25,9 +25,10 @@
         {
             "name": "Jan",
             "profilePictureResource": "url(\"https://avatars.githubusercontent.com/u/85286163?v=4\")",
-            "aboutMe": "I'm a 17 year old student from Germany. I started coding in about 2018 in Python, which i used for almost four years before learning Rust. I now do backend stuff in Rust and rely on Adrian for any frontend that's supposed to look cool.",
+            "aboutMe": "I'm a 17 year old student from Germany. I started coding in about 2018 in Python, which I used for almost four years before learning Rust. I now do backend stuff in Rust and rely on Adrian for any frontend that's supposed to look cool.",
             "social": {
-                "github": "https://github.com/TeeFederFisch"
+                "email": "jan.neuenfeld@gmail.com",
+                "github": "https://github.com/JanNeuenfeld",
             }
         }
     ];
