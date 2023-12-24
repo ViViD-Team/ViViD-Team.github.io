@@ -17,6 +17,7 @@
             ",
             "image_resource": Outline,
             "findoutmore_href": "https://github.com/AliBlubberus/OUTLINE",
+            "download_href": "https://github.com/ViViD-Team/OUTLINE/releases/tag/Release",
         }
     ]
 
